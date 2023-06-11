@@ -4,25 +4,20 @@ from flask import render_template
 @app.route('/')
 @app.route('/index')
 def index():
-    return render_template('glowna.html')
-
-@app.route('/name', defaults={'name': "Anonim"})
-@app.route('/name/<name>')
-def name(name=None):
-    return f"Hello, {name}!"
+    return render_template('index.html')
 
 @app.route('/author')
 def author():
-    return render_template('autor.html')
+    return render_template('author.html')
 
-@app.route('/ekstrakcja')
-def ekstrakcja():
-    return render_template('ekstrakcja.html')
+@app.route('/extract')
+def extract():
+    return render_template('extract.html')
 
-@app.route('/lista_produktow')
-def listaproduktow():
-    return render_template('lista_produktow.html')
+@app.route('/products')
+def products():
+    return render_template('products.html')
 
-@app.route('/produkt')
-def produkt():
-    return render_template('produkt.html')
+@app.route('/product')
+def product():
+    return render_template('product.html')
